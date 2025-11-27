@@ -23,3 +23,12 @@ while True:
     cv2.imshow('Virtual Mouse', frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
+# Step 4: Process Hand Landmarks
+    output = hand_detector.process(rgb_frame)
+    hands = output.multi_hand_landmarks
+
+    if hands:
+        for hand in hands:
+            drawing_utils.draw_landmarks(frame, hand)
+            landmarks = hand.landmark   
