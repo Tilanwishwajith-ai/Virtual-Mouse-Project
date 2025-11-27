@@ -47,3 +47,17 @@ while True:
                     cv2.circle(frame, (x, y), 10, (0, 255, 255), cv2.FILLED)
                     thumb_x = x
                     thumb_y = y
+
+# Step 6: Move Mouse
+                    pyautogui.moveTo(index_x, index_y)
+
+
+# Step 7: Clicking Logic
+            # (Check distance between Index (8) and Thumb (4))
+            if 'index_x' in locals() and 'thumb_x' in locals():
+                distance = math.hypot(index_x - thumb_x, index_y - thumb_y)
+                if distance < 40:
+                    pyautogui.click()
+                    pyautogui.sleep(0.2)
+
+                    
