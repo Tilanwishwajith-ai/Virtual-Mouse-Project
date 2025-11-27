@@ -12,3 +12,14 @@ drawing_utils = mp.solutions.drawing_utils
 screen_width, screen_height = pyautogui.size()
 
 print("System Initialized...")
+
+# Step 3: Main Loop to capture frames
+while True:
+    _, frame = cap.read()
+    frame = cv2.flip(frame, 1)
+    frame_height, frame_width, _ = frame.shape
+    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+    cv2.imshow('Virtual Mouse', frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
