@@ -32,3 +32,18 @@ while True:
         for hand in hands:
             drawing_utils.draw_landmarks(frame, hand)
             landmarks = hand.landmark   
+
+# Step 5: Identify Index and Thumb fingers
+            for id, landmark in enumerate(landmarks):
+                x = int(landmark.x * frame_width)
+                y = int(landmark.y * frame_height)
+
+                if id == 8: # Index Finger
+                    cv2.circle(frame, (x, y), 10, (0, 255, 255), cv2.FILLED)
+                    index_x = screen_width / frame_width * x
+                    index_y = screen_height / frame_height * y
+
+                if id == 4: # Thumb
+                    cv2.circle(frame, (x, y), 10, (0, 255, 255), cv2.FILLED)
+                    thumb_x = x
+                    thumb_y = y
