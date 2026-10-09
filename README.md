@@ -81,6 +81,6 @@ Tilan Wishwajith
 - GitHub: Tilanwishwajith-ai
 - LinkedIn: Tilan Wishwajith
 📚 References
-- OpenCV Python packages
+- OpenCV Python packages 
 - MediaPipe 0.10.21
 - MediaPipe legacy Solutions API change
