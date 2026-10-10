@@ -1,4 +1,4 @@
-🖐️ Virtual Mouse Using OpenCV
+ 🖐️ Virtual Mouse Using OpenCV
 Control your computer's mouse pointer with hand movements captured by a webcam.
 This Python project uses OpenCV to capture and process video, MediaPipe to detect hand landmarks, and PyAutoGUI to move the cursor and perform clicks.
 ✨ Features
