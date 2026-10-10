@@ -83,4 +83,4 @@ Tilan Wishwajith
 📚 References
 - OpenCV Python packages 
 - MediaPipe 0.10.21
-- MediaPipe legacy Solutions API change
+- MediaPipe legacy Solutions API change  
